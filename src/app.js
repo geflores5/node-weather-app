@@ -34,7 +34,6 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        message: 'Help yourself.',
         name: 'Giovanni Flores'
     })
 })
@@ -61,10 +60,6 @@ app.get('/weather', (req, res) => {
             })
         })
     })
-})
-
-app.get('/help/*', (req,res) => {
-    res.send('Help article not found')
 })
 
 app.get('*', (req, res) => {
